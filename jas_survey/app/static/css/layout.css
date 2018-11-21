@@ -1,0 +1,321 @@
+body
+{
+	font-family: arial;
+	font-size: 12px;
+	margin:0;
+	padding:0;
+}
+/* -------------------------------------------------- */
+/* -- DVIs ------------------------------------------ */
+/* -------------------------------------------------- */
+div#plogo_bg
+{
+	height: 64px;
+	/* margin-left: 24px; */
+	/* margin-right: 24px; */
+	/* margin-top: 12px; */
+	background-repeat: repeat-x;
+	background-position: left top;
+	position: relative;
+	text-align: left;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+}
+
+div#plogo
+{
+	height: 36px;
+	margin-top:12px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	position: relative;
+	text-align: left;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+div#pheader
+{
+	height: 24px;
+	min-height: 12px;
+	_height: 12px;
+	margin: 0;
+	margin-bottom: 1px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	position: relative;
+	clear: both;
+}
+
+/* form */
+
+div#pheader form
+{
+	float:right;
+	margin: 0;
+	height: 30px;
+	
+	display: inline-block;
+	zoom: 1; /* ie7 hack for display:inline-block */
+	*display: inline;
+	padding: 3px 5px;
+	
+}
+
+div#pheader form h1
+{
+	font-size: 18px;
+	text-align: right;
+	margin: 0;
+	padding: 1px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+}
+
+div#pheader form h2
+{
+	font-size: 14px;
+	text-align: right;
+	margin: 0;
+	margin-bottom: 12px;
+	padding: 1px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+}
+
+div#pheader form p
+{
+	font-size: 12px;
+	text-align: right;
+	margin: 0;
+	padding: 1px;
+}
+
+div#pheader form input {
+	font: normal 12px/100% Arial, Helvetica, sans-serif;
+}
+
+div#pheader form .searchfield {
+	padding: 2px 2px 2px 2px;
+	width: 102px;
+	outline: none;
+
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+}
+
+/* top menu
+------------------------- */
+#pmainnav {
+/* width:100%; */
+margin:0;
+position:relative;
+/* clear:both; */
+/* display: none; */
+}
+
+div#pmainnav ul {
+    position:relative;
+	padding-left: 20px;
+	padding-bottom: 1px;	
+	margin: 0px;
+	height: 23px;
+	#height: 23px;
+	_height: 23px;
+	font: bold 14px verdana, arial, sans-serif;
+	list-style-type: none; 
+	text-align: left;
+}
+
+	 
+div#pmainnav ul li {
+	display: inline;
+	margin:0px
+	
+}
+
+div#pmainnav ul li a {
+    position:relative;
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 1px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+
+	font-size: 14px;
+	padding: .4em 1em .42em;
+
+	text-decoration: none
+}
+
+div#pmainnav ul li.act1 a {
+	padding-top: 5px;
+	position: relative;
+	top: 1px;
+	font-weight: bold;
+}
+
+/* sub menu
+--------------------- */
+div#psubnav
+{
+    position:relative;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	vertical-align: baseline;
+	margin: 0 1px;
+	outline: none;
+	text-align: left;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+
+	margin: 0;
+	
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+	
+	text-decoration: none
+}
+
+div#psubnav ul
+{
+	margin: 0 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 100%;
+}
+
+div#psubnav li
+{
+	display: inline;
+	padding: 0 1px;
+	font-size: 100%;
+}
+
+div#psubnav li a
+{
+    position:relative;
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 1px 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+
+	font-size: 12px;
+	padding: .25em .75em .25em;
+
+	text-decoration: none
+}
+
+div#psubnav li a:hover
+{
+	padding: .25em .75em .25em;
+	text-decoration: none;
+	margin: 0 1px;
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+/* content & footer
+---------------------------------------------- */
+div#pcontents {
+	font-family: arial;
+	font-size: 12px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	min-height: 280px;
+	_height: 280px;
+	clear: both;
+}
+
+#pcontents p { line-height: 165%; }
+
+div#pfooter
+{
+	padding: 5px;
+	margin: 0;
+	font-size: 90%;
+	text-align: right;
+	margin-top:200px;
+}
+
+div#pfooter a, div#pfooter a:hover
+{
+	text-decoration: none;
+}
+
+/* button 
+---------------------------------------------- */
+.button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+
+.bigrounded {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}
+.medium {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.small {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+.tiny {
+	font-size: 10px;
+	padding: .2em 1em .275em;
+}
+
+.link {
+	text-decoration: underline;
+	color: blue;
+	cursor: pointer;
+}

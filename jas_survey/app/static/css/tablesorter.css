@@ -1,0 +1,172 @@
+/* tables */
+table.tablesorter {
+        font-family:arial;
+        background-color: #CDCDCD;
+        margin:10px 0pt 15px;
+        font-size: 9pt;
+        width: 100%;
+        text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+        background-color: #EEF;
+        border: 1px solid #EEF;
+        font-size: 8pt;
+        padding: 4px;
+		padding-right:18px;
+		text-align: left;
+}
+table.tablesorter thead tr .header {
+        background-image: url(bg.gif);
+        background-repeat: no-repeat;
+        background-position: center right;
+        cursor: pointer;
+}
+table.tablesorter tbody td {
+        color: #3D3D3D;
+        padding: 4px;
+        background-color: #FFF;
+        vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+        background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+        background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+        background-image: url(desc.gif);
+}
+
+/*
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+*/
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables features
+ */
+
+.dataTables_wrapper {
+	position: relative;
+	min-height: 202px;
+	_height: 202px;
+	clear: both;
+}
+
+.dataTables_processing {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	width: 250px;
+	margin-left: -125px;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #999;
+	font-size: 11px;
+	padding: 2px 0;
+}
+
+.dataTables_length {
+	margin-right: 30px;
+	display: inline;
+/*	float: left; */
+}
+
+.dataTables_filter {
+	margin-right: 30px;
+	display: inline;
+/*	float: right; */
+	text-align: right;
+}
+
+.dataTables_info {
+	display: inline;
+/*	float: left; */
+}
+
+.dataTables_paginate {
+	margin-right: 30px;
+/*	width: 44px; */
+/*	width: 50px; */
+	display: inline;
+/*	float: right; */
+	text-align: right;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 19px;
+	width: 19px;
+	margin-left: 3px;
+	float: left;
+}
+
+.paginate_disabled_previous {
+	background-image: url('../images/back_disabled.jpg');
+}
+
+.paginate_enabled_previous {
+	background-image: url('../images/back_enabled.jpg');
+}
+
+.paginate_disabled_next {
+	background-image: url('../images/forward_disabled.jpg');
+}
+
+.paginate_enabled_next {
+	background-image: url('../images/forward_enabled.jpg');
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+.sorting_asc {
+	background: url('desc.gif') no-repeat center right;
+        cursor: pointer;
+}
+
+.sorting_desc {
+	background: url('asc.gif') no-repeat center right;
+        cursor: pointer;
+}
+
+.sorting {
+	background: url('bg.gif') no-repeat center right;
+        cursor: pointer;
+}
+
+.example_alt_pagination div.dataTables_info {
+	width: 40%;
+}
+
+.example_alt_pagination .dataTables_paginate {
+	width: 400px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.example_alt_pagination div.dataTables_paginate span.paginate_button,
+ 	.example_alt_pagination div.dataTables_paginate span.paginate_active {
+	border: 1px solid #aaa;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	/*cursor: hand;*/
+}
+
+.example_alt_pagination div.dataTables_paginate span.paginate_button {
+	background-color: #ddd;
+}
+
+.example_alt_pagination div.dataTables_paginate span.paginate_button:hover {
+	background-color: #ccc;
+}
+
+.example_alt_pagination div.dataTables_paginate span.paginate_active {
+	background-color: #99B3FF;
+}
+

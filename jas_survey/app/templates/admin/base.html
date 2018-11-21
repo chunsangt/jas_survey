@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/screen.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ui-lightness/jquery-ui.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/color-white.css') }}" />
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/encryption.js') }}"></script>
+    {{ moment.include_jquery() }}
+    {{ moment.include_moment() }}
+    {% block header %}{% endblock %}
+</head>
+<body>
+    <div id="plogo" style="margin-left:12px;background-image: url(../static/img/logo.png);">
+    <div style="float:right;margin:1em;">Survey DB</div>
+    </div>
+    <div id="pheader">
+        <form name="qsearch" method="get" action="list.tps" class="search" onsubmit="return validateqsearch();">
+        <p style="text-align:right;margin-top:2px;">
+        <input type="hidden" name="lst" value="evt_list1" />
+        <input type="hidden" name="filter" value="search" />
+        <input class="searchfield" type="text" name="valfilter" value="" size="20" />
+        <input class="button small" type="submit" style="font-size:10px;" value="Search" />
+        <input class="button small" type="button" style="font-size:10px;" onclick="window.location='logout.tps';return false;" value="Logout" />
+        </p>
+        </form>
+    </div>
+
+    <div id="pmainnav">
+        <ul>
+            <li><a href="list.tps?lst=survey1">Surveys</a> </li>
+            <li><a href="lst_main.tps">Settings</a></li>
+            <li><a href="help.tps">Help</a></li>
+        </ul>
+    </div>
+
+    <div id="psubnav">
+        {% if activeTab == '1' %}
+            <ul>
+                <li><a href="list.tps?lst=survey1">Active surveys</a></li>
+                <li><a href="list.tps?lst=survey2">Closed surveys</a></li>
+                <li><a href="edit.tps?frm=survey&rec=0">Add survey</a></li>
+                <li><a href="upload_survey.tps">Upload survey</a></li>
+                <li><a href="upload_question.tps">Upload questions</a></li>
+                <li><a href="user_pwd.tps?id=<%= gbl_UserID %>">Change password</a></li>
+            </ul>
+        {% elif activeTab == '88' %}
+            <ul>
+                <li><a href="lst_main.tps">Lists</a></li>
+                <li><a href="frm_main.tps">Forms</a></li>
+                <li><a href="list.tps?lst=sys_user1">Users</a></li>
+            </ul>
+        {% elif activeTab == '99' %}
+            <ul>
+                <li><a href="help.tps">Help</a></li>
+            </ul>
+        {% else %}
+            <ul>
+                <li>Unknown activeTap</li>
+            </ul>
+        {% endif %}
+    </div>
+
+    <div id="pcontents">{% block content %}{% endblock %}</div>
+    <div id="pfooter"><a href="mailto:info@meeetingceo.com">Survey DB. Copyright &copy; 2008, {{ moment().format('YYYY') }} Wise Software Development Company Limited. All rights reserved. ver. 1</a></div>
+
+</body>
+</html>

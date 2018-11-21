@@ -1,0 +1,58 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Events - List{% endblock %}
+
+{% block header %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tablesorter.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.cursorMessage.css') }}" />
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.tablesorter.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.form.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.cursorMessage.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <table id="survey1" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+        <thead>
+            <tr>
+            <th style="width: 48px;">Survey ID&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 173px;">Name&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 273px;">Description&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 34px;">Date&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 62px;">Start time&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 62px;">End time&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 42px;">Status&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 62px;">Questions&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 66px;">Responses&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 65px;">Action: Question&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 78px;">Action: Preview&nbsp;&nbsp;&nbsp;</th>
+            <th style="width: 79px;">Action: Response&nbsp;&nbsp;&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in rows %}
+            <tr>
+                <td>{{row["SVID"]}}</td>
+                <td>{{row["SVNAME"]}}</td>
+                <td>{{row["SVDESC"]}}</td>
+                <td>{{row["SVDATE"]}}</td>
+                <td>{{row["SVSTIME"]}}</td>
+                <td>{{row["SVETIME"]}}</td>
+                <td>{{row["SVSTATUS"]}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#survey1").tablesorter({widthFixed: true, widgets: ['zebra']});
+        });
+
+    </script>
+{% endblock %}
